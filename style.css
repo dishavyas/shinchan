@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:thistle;
+    background-attachment: fixed;
+}
+
+.face {
+    height: 200px;
+    width: 350px;
+    position: relative;
+    margin-left: 40%;
+    margin-top: 10%;
+ animation: face-move 1s none 2.5 infinite;
+
+}
+.face::before{
+    content: '';
+    background-color: black;
+    height: 122px;
+    width: 95px;
+    z-index: 6;
+    left: 210px;
+    top: 29px;
+    position: absolute;
+    transform: rotate(-20deg);
+    border-radius: 100% 190% 100% 0%;
+}
+.face:before{
+    content: ('');
+    width: 235px;
+    height: 182px;
+    background-color: black;
+    transform:  rotate(-8deg);
+    position:absolute;
+    border-radius: 100% 160% 100% 0%;
+    left: 65px;
+    top: 10px;
+    z-index: 5;
+
+}
+.forehead, .forehead::after{
+    content: ('');
+    width: 230px;
+    height: 185px;
+    z-index: 6;
+    left: 60px;
+    bottom: -14px;
+    top: 21px;
+    position: absolute;
+    transform: rotate(-3deg);
+    border-radius: 60% 120% 50% 0%;
+    background-color: #fbc6a3;
+    
+}
+.forehead::after{
+    width: 160px;
+    height: 150px;
+    border-radius: 150% 174% 160% 100%;
+    transform: rotate(-20deg);
+    top: 13px;
+    left: 60px;
+    
+    border-top: 15px solid #fbc6a3;
+
+}
+
+.ear{
+    width: 60px;
+    height: 50px;
+    background-color: #fbc6a3;
+    z-index: 7;
+    position: absolute;
+    border-radius: 300% 190% 200% 100%;
+    transform: rotate(-20deg);
+    top: 100px;
+    left: 270px;
+}
+.cheeks{
+    background: #fbc6a3;
+    width: 280px;
+    height: 100px;
+    border-radius: 50px 0px 50px 40px;
+    transform: rotate(-3deg);
+    position: relative;
+    top: 100px;
+    left: 10px;
+  content: '';
+}
+.cheeks::after{
+    width: 297px;
+    height: 100px;
+    background-color: #fbc6a3;
+    content: '';
+    transform: rotate(-3deg);
+    position: absolute;
+    border-radius: 500% 500% 500% 500%;
+    left:1px;
+    bottom:-14px;
+}
+.i{
+    display: flex;
+    position: relative;
+    background-color:#fbc6a3;
+    justify-content: space-between;
+    width: 120px;
+    height: 40px;
+    transform: rotate(3deg);
+    z-index: 10;
+    margin-left: 30%;
+    margin-top:10%;
+}
+
+.eye{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: black;
+    border-radius: 100%;
+    display: flex;
+    animation: close-eye 4s none .2s infinite;
+}
+.eye::after{
+    content: '';
+    position: absolute;
+    background: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    left: 17px;
+    top: 12px;
+}
+.eye::before
+{
+    
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    border-radius: 100%;
+    border-top: 2px solid black;
+    left: -20px;
+    margin-top: -20px;
+}
+.eye .left, .eye .right{
+    position:absolute;
+    top: 80px;
+    left: 100px;
+    z-index: 10;
+}
+.eye .right{
+    left: 190px;
+    top: 90px;
+}
+.brow{
+    display: flex;
+    position: relative;
+    background-color:#fbc6a3;
+    justify-content: space-between;
+    width: 100px;
+    height: 30px;
+    transform: rotate(3);
+    z-index: 8;
+    margin-left:95px ;
+    margin-top:-70px ;
+}
+
+.eyebrow{
+    animation: eyebroani 2s linear .2s infinite;
+
+    position: relative;
+    display: flex;
+    
+    width: 20px;
+    height: 60px;
+    background-color: black;
+    border-radius: 15px;
+    z-index: 8;
+    transform: rotate(40deg);
+}
+ .eyebrow:after{
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background-color: black;
+    z-index: 8;
+    border-radius: 15px;
+    transform: rotate(40deg);
+    top: 10px;
+    left: 90px;
+
+}
+.eyebrow::after{
+    content: '';
+    transform: rotate(-100deg);
+    left: 19px;
+    margin-top: -23px;
+    top: auto;
+
+}
+
+.eyebrow .right{
+    left: 180px;
+    top: 8px;
+    transform: rotate(50px);
+}
+.eyebrow .left{
+    left: 180px;
+    top: 8px;
+    transform: rotate(50px);
+}
+.mouth{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #76322f;
+    top: 180px;
+    left: 50px;
+    z-index: 8;
+    border-radius: 100%;
+}
+@keyframes eyebroani{
+    0%{margin-top: auto}
+    10%{margin-top: -10px}
+    20%{margin-top: auto}
+    30%{margin-top: -10px}
+    40%{margin-top: auto}
+    100%{margin-top: auto}
+}
+@keyframes close-eye{
+    0%{
+        height: 40px;
+        margin-top: 20px;
+        overflow: auto;
+    }
+    5%{
+        height: 2px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    5.1%{
+        height: 40px;
+        margin-top: 0px;
+        overflow: visible;
+    }
+}
